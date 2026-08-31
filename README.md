@@ -10,23 +10,35 @@ The project was developed to practice digital input, digital output, and impleme
 
 ---
 
+## Project Photo
+
+![Project Photo](photo.jpeg)
+
+---
+
+## Project Demo
+
+[test.mp4](test.mp4)
+
+---
+
 ## Features
 
-- Control multiple LEDs using a push button.
-- Sequential LED lighting effect.
-- Simple state-based program logic.
-- Interactive user input.
+* Control multiple LEDs using a push button.
+* Sequential LED lighting effect.
+* Simple state-based program logic.
+* Interactive user input.
 
 ---
 
 ## Concepts Practiced
 
-- Digital input and output
-- Push button interfacing
-- LED control
-- Conditional statements
-- Program flow
-- Arduino programming
+* Digital input and output
+* Push button interfacing
+* LED control
+* Conditional statements
+* Program flow
+* Arduino programming
 
 ---
 
@@ -34,23 +46,25 @@ The project was developed to practice digital input, digital output, and impleme
 
 Through this project, I learned how to:
 
-- Read button input from Arduino.
-- Control multiple LEDs.
-- Create a simple LED sequence.
-- Combine hardware with programming logic.
+* Read button input from Arduino.
+* Control multiple LEDs.
+* Create a simple LED sequence.
+* Combine hardware with programming logic.
 
 ---
 
 ## Future Improvements
 
-- Add multiple lighting patterns.
-- Control sequence speed.
-- Add different operating modes.
-- Support multiple buttons.
+* Add multiple lighting patterns.
+* Control sequence speed.
+* Add different operating modes.
+* Support multiple buttons.
 
 ---
 
 ## Technologies
 
-- Arduino Uno
-- C++
+* Arduino Uno
+* LEDs
+* Push Button
+* C++
