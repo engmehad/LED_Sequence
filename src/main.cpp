@@ -1,6 +1,7 @@
+
 #include <Arduino.h>
 
-int Leds[] = {7, 8, 9, 10, 11};
+int Leds[] = {3,4,5,6,9};
 int sw = 2;
 
 bool ledsState = false;
@@ -11,12 +12,18 @@ unsigned long interval = 500;
 int index = 0;
 int num = 5;
 
+void clearLeds()
+{
+    for (int i = 0; i < num; i++) {
+        digitalWrite(Leds[i], LOW);
+    }
+}
+
 void setup()
 {
     pinMode(sw, INPUT_PULLUP);
 
-    for (int i = 0; i < num; i++)
-    {
+    for (int i = 0; i < num; i++) {
         pinMode(Leds[i], OUTPUT);
         digitalWrite(Leds[i], LOW);
     }
@@ -24,34 +31,26 @@ void setup()
 
 void loop()
 {
-    if (digitalRead(sw) == LOW && !ledsState)
-    {
+    if (digitalRead(sw) == LOW && !ledsState) {
         ledsState = true;
         index = 0;
-
-        for (int i = 0; i < num; i++)
-            digitalWrite(Leds[i], LOW);
-
+        clearLeds();
         time = millis();
     }
 
-    if (ledsState && millis() - time >= interval)
-    {
+    if (ledsState && millis() - time >= interval) {
         time = millis();
 
-        // إطفاء جميع الليدات
-        for (int i = 0; i < num; i++)
-            digitalWrite(Leds[i], LOW);
+        clearLeds();
 
-        // تشغيل الليد الحالي
         digitalWrite(Leds[index], HIGH);
-
         index++;
 
-        if (index >= num)
-        {
+        if (index >= num) {
+            clearLeds();
             ledsState = false;
             index = 0;
         }
     }
 }
+
